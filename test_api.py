@@ -8,7 +8,7 @@ def test_upload_pdf_success():
     files = {'file': ('test.pdf', open('data.pdf', 'rb'), 'application/pdf')}
     response = client.post("/upload-pdf/", files=files)
     assert response.status_code == 200
-    assert response.json() == {"filename": "data.pdf"}
+    assert response.json() == {"filename": "resources/data.pdf"}
 
 
 def test_upload_pdf_failure():
@@ -19,11 +19,11 @@ def test_upload_pdf_failure():
 
 def test_get_query_response_success():
     # Mock a successful query
-    test_query = {"content": "What is the weather today?"}
+    test_query = {"content": "Que datos seencuentran en el documento?"}
     response = client.post("/query/", json=test_query)
     assert response.status_code == 200
     # Add more assertions based on the expected structure of your response
-    
+
 
 def test_get_query_response_failure():
     # Mock a failed query due to bad input
