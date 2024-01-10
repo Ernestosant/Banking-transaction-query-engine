@@ -56,3 +56,6 @@ pytest test_api.py
 ```
 **Note:** 
 To run the tests, you must create a directory named `resources/data.pdf`. Where **data.pdf** is the document on which the tests will be conducted.
+
+## Try it on Render
+The API is deployed on Render. You can access the Swagger UI [here](https://transaction-query-engine.onrender.com/docs#/).
